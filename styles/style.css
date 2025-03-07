@@ -14,9 +14,15 @@
  .disply-flex{
     display: flex;
  }
+
+.text-primary{
+  color:rgba(255, 144, 14, 1) ;
+}
+/* dark-2 */
  .text-gray{
    color: rgba(66, 66, 66, 1);
  }
+ /* dark-3 */
  .text-light-gray{
     color:rgba(114, 114, 114, 1);
  }
@@ -33,6 +39,18 @@
    border-radius: 8px;
    border: 0;
  }
+ main{
+  max-width: 1440px;
+  margin: 0 auto;
+ }
+ main > section{
+  margin-top: 130px;
+ }
+
+ .section-title{
+  font-size: 2.8rem;
+  font-weight: 700;
+}
   /* header style */
 
   /* navbar releted style */
@@ -74,11 +92,75 @@
     width: 100%;
   }
 
+  /* team and feature related style */
+  .teames{
+    align-items: center;
+  }
+  .teame-image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .our-features{
+    margin-left: 130px;
+    max-width: 530px;
+  }
+ 
+  #quick-list{
+    font-weight: 500;
+  }
+/* some facts releted style */
+.car-container{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ margin-top: 100px;
+}
+.card-fact{
+  border: 1px solid #FF900E;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.fact-number{
+  font-size: 2.8rem;
+  font-weight: 600;
+ margin-top: 5px;
+ margin-bottom: 10px;
+}
+.fact-name{
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.fact-description{
+  max-width: 540px;
+}
 
   /* responsive media query */
   @media screen and (max-width:576px) {
-    .navber, .nav-links{
+    .navber, .nav-links, .teames{
      flex-direction: column;
+    }
+    .teame-image-container{
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+    }
+    .our-features{
+      margin-left: 20px;
+    }
+  }
+
+
+  /* mesium size device */
+  @media screen and (min-width:576px) and (max-width:992px) {
+    .teames{
+      flex-direction: column;
+    }
+    .our-features{
+      margin-left: 50px auto;
     }
   }
 
